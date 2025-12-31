@@ -1,2 +1,28 @@
-# paysim-fraud-analysis
-SQL analysis of fraud patterns in mobile money transactions
+# paysim-fraud-analysis (SQLite)
+## Overview
+This project analyzes simulated mobile money transactions to identify patterns associated with fraudulent behavior using SQLite and DBeaver.
+
+## Dataset
+- Source: https://www.kaggle.com/datasets/ealaxi/paysim1
+- Transactions: ~6 million rows
+- Key fields: transaction type, amount, balances, fraud label
+
+## Questions Explored
+1. How common is fraud overall?
+2. Which transaction types are most fraud-prone?
+3. Are larger transactions riskier?
+4. Are balance inconsistencies associated with fraud?
+5. Which destination accounts receive repeated fraudulent transactions and how much?
+6. Do the hours that have the most transactions mean they have the most fraud cases?
+
+## Key Findings
+- Fraud presents ~0.13% of all transactions, confirming a strong class imbalance.
+- Transfer transactions show the highest fraud rate and should be prioritized for monitoring.
+- Large transactions are significantly more likely to be fraudulent than small or medium ones.
+- Balance inconsistencies are highly correlated with fraud and represent a strong detection signal.
+- Fraud activity occurs in short, concentrated time bursts rather than evenly over time.
+- Repeated fraud activity is observed for destination accounts, while origin accounts do not show any fraudulent transactions.
+- High transaction volume does not necessarily indicate higher fraud risk.
+
+## Tools Used
+- SQLite, DBeaver, Excel
