@@ -53,7 +53,7 @@ SELECT
 FROM paysim
 GROUP BY isFraud;
 
---6) Which destination accounts receive fraudulent transactions multiple times?
+--6) Identify destination accounts involved in multiple confirmed fraudulent transactions.
 SELECT
   nameDest,
   COUNT(*) AS fraud_attempts,
@@ -65,7 +65,18 @@ HAVING COUNT(*) > 1
 ORDER BY fraud_attempts DESC, total_fraud_amount DESC;
 
 
---7) Do the hours that have the most transactions mean they have the most fraud cases?
+-- 7) Identify origin accounts involved in multiple confirmed fraudulent transactions.
+SELECT
+  nameOrig,
+  COUNT(*) AS fraud_attempts,
+  SUM(amount) AS total_fraud_amount
+FROM paysim
+WHERE isFraud = 1
+GROUP BY nameOrig
+HAVING COUNT(*) > 1
+ORDER BY fraud_attempts DESC, total_fraud_amount DESC;
+
+--8) Do the hours that have the most transactions mean they have the most fraud cases?
 SELECT
   step,
   COUNT(*) AS total_transactions,
@@ -74,6 +85,7 @@ SELECT
 FROM paysim
 GROUP BY step
 ORDER BY total_transactions DESC;
+
 
 
 
