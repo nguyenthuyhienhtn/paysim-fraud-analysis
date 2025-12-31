@@ -21,14 +21,14 @@ This project analyzes simulated mobile money transactions to identify patterns a
 - Large transactions are significantly more likely to be fraudulent than small or medium ones.
 - Balance inconsistencies are highly correlated with fraud and represent a strong detection signal.
 - Fraud activity occurs in short, concentrated time bursts rather than evenly over time.
-- Repeated fraud activity is observed for destination accounts, while origin accounts do not show any fraudulent transactions.
+- Repeated fraud appears among destination accounts, while no origin accounts repeat fraud more than once in this dataset.
 - High transaction volume does not necessarily indicate higher fraud risk.
 
 ### Fraud Risk by Transaction Type
-![Fraud by Type](screenshot: 03_risk_by_type.png)
+![Fraud by Type](screenshot/03_risk_by_type.png)
 
 ### Fraud vs Transaction Volume
-![Volume vs Fraud](screenshot: 08_volume_vs_fraud.png)
+![Volume vs Fraud](screenshot/08_volume_vs_fraud.png)
 
 ## Tools Used
 - SQLite, DBeaver, Excel
