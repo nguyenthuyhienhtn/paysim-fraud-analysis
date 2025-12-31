@@ -24,5 +24,11 @@ This project analyzes simulated mobile money transactions to identify patterns a
 - Repeated fraud activity is observed for destination accounts, while origin accounts do not show any fraudulent transactions.
 - High transaction volume does not necessarily indicate higher fraud risk.
 
+### Fraud Risk by Transaction Type
+![Fraud by Type](screenshot: 03_risk_by_type.png)
+
+### Fraud vs Transaction Volume
+![Volume vs Fraud](screenshot: 08_volume_vs_fraud.png)
+
 ## Tools Used
 - SQLite, DBeaver, Excel
