@@ -24,6 +24,19 @@ This project analyzes simulated mobile money transactions to identify patterns a
 - Repeated fraud appears among destination accounts, while no origin accounts repeat fraud more than once in this dataset.
 - High transaction volume does not necessarily indicate higher fraud risk.
 
+## How to Run
+- Download the dataset from Kaggle
+- Import CVS into SQLite (DBeaver)
+- Open queries.sql and run queries top to bottom
+
+## Repo structure
+- queries.sql = analysis
+- *.png = screenshots showing query results
+- README.md = project overview and findings
+
+## Limitation
+- Data is simulated. Results show patterns in Paysim simulation, not real bank data.
+
 ### Fraud Risk by Transaction Type
 ![Fraud by Type](screenshot/03_risk_by_type.png)
 
