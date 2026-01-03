@@ -27,10 +27,10 @@ This project analyzes simulated mobile money transactions to identify patterns a
 - High transaction volume does not necessarily indicate higher fraud risk.
 
 ### Fraud Risk by Transaction Type
-![Fraud by Type](screenshot/03_risk_by_type.png)
+![Fraud by Type](03_risk_by_type.png)
 
 ### Fraud vs Transaction Volume
-![Volume vs Fraud](screenshot/08_volume_vs_fraud.png)
+![Volume vs Fraud](08_volume_vs_fraud.png)
 
 ## How to Run
 - Download the dataset from Kaggle
