@@ -1,12 +1,14 @@
-# paysim-fraud-analysis (SQLite)
+# Paysim Fraud Analysis (SQLite)
 ## Overview
 This project analyzes simulated mobile money transactions to identify patterns associated with fraudulent behavior using SQLite and DBeaver.
 
 ## Dataset
+- The analysis uses the PaySim dataset, a simulated mobile money transaction dataset containing approximately 6 million records. Each row represents a single transaction with details on transaction type, amount, account balances, and a fraud indicator. The dataset is simulated and commonly used for fraud detection practice.
 - Source: https://www.kaggle.com/datasets/ealaxi/paysim1
-- Transactions: ~6 million rows
-- Key fields: transaction type, amount, balances, fraud label
 
+## Tools Used
+- SQLite, DBeaver, Excel
+  
 ## Questions Explored
 1. How common is fraud overall?
 2. Which transaction types are most fraud-prone?
@@ -24,6 +26,12 @@ This project analyzes simulated mobile money transactions to identify patterns a
 - Repeated fraud appears among destination accounts, while no origin accounts repeat fraud more than once in this dataset.
 - High transaction volume does not necessarily indicate higher fraud risk.
 
+### Fraud Risk by Transaction Type
+![Fraud by Type](screenshot/03_risk_by_type.png)
+
+### Fraud vs Transaction Volume
+![Volume vs Fraud](screenshot/08_volume_vs_fraud.png)
+
 ## How to Run
 - Download the dataset from Kaggle
 - Import CVS into SQLite (DBeaver)
@@ -37,11 +45,5 @@ This project analyzes simulated mobile money transactions to identify patterns a
 ## Limitation
 - Data is simulated. Results show patterns in Paysim simulation, not real bank data.
 
-### Fraud Risk by Transaction Type
-![Fraud by Type](screenshot/03_risk_by_type.png)
 
-### Fraud vs Transaction Volume
-![Volume vs Fraud](screenshot/08_volume_vs_fraud.png)
 
-## Tools Used
-- SQLite, DBeaver, Excel
